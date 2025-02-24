@@ -20,7 +20,7 @@ function App() {
 
     try {
       // Send a POST request to the Flask backend
-      const response = await fetch("https://sam-scrapper.onrender.com/scrape", {
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/scrape`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
